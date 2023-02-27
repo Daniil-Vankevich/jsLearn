@@ -116,6 +116,6 @@ function createBeggar() {
 }
 
 let begg1 = createBeggar();
-// begg1();
+begg1();
 
 let p;

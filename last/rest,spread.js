@@ -1,20 +1,20 @@
 // остаточные операторы (rest) и операторы расширения (spread)
 // ... rest остаточный оператор. Независимо от того, сколько передается аргументов, можно доставать их всех и с ними работать!
-// const func = (...rest) => {
-// 	return rest.reduce((ac, item) => {
-// 		return ac + item;
-// 	}, 0);
-// };
+const func = (...rest) => {
+	return rest.reduce((ac, item) => {
+		return ac + item;
+	}, 0);
+};
 
-// console.log(func(1, 2, 3, 4, 5));
+console.log(func(1, 2, 3, 4, 5));
 
-// const funRest = (a, b, ...rest) => {
-// 	return rest.reduce((ac, item) => {
-// 		return ac + item;
-// 	}, 0);
-// };
+const funRest = (a, b, ...rest) => {
+	return rest.reduce((ac, item) => {
+		return ac + item;
+	}, 0);
+};
 
-// console.log(funRest(1, 2, 3, 4, 5));
+console.log(funRest(1, 2, 3, 4, 5));
 
 
 
