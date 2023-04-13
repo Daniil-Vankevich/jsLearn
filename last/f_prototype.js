@@ -1,18 +1,18 @@
-// let animal = {
-// 	eats: true
-// };
+let animal = {
+	eats: true
+};
 
-// function Rabbit(name) {
-// 	this.name = name;
-// }
+function Rabbit(name) {
+	this.name = name;
+}
 
-// Rabbit.prototype = animal;
+Rabbit.prototype = animal;
 
-// let rabbit = new Rabbit("White Rabbit");
+let rabbit = new Rabbit("White Rabbit");
 
-// console.log(rabbit.__proto__);
+console.log(rabbit.__proto__);
 
-// console.log(rabbit.__proto__ === Rabbit.prototype);
+console.log(rabbit.__proto__ === Rabbit.prototype);
 
 
 // ...........................................

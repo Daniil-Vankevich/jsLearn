@@ -188,28 +188,28 @@
 
 //..................................................Геттеры/сеттеры, другие сокращения. Как и в литеральных объектах, в классах можно объявлять вычисляемые свойства, геттеры/сеттеры и т.д.       Вот пример user.name, реализованного с использованием get/set:
 
-class User {
-	constructor(name) {
-		this.name = name;
-	}
+// class User {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
 
-	get name() {
-		return this._name;
-	}
+// 	get name() {
+// 		return this._name;
+// 	}
 
-	set name(value) {
-		if(value.length < 4) {
-			console.log("Имя слишком короткое.");
-			return;
-		};
-		this._name = value;
-	};	
-}
+// 	set name(value) {
+// 		if(value.length < 4) {
+// 			console.log("Имя слишком короткое.");
+// 			return;
+// 		};
+// 		this._name = value;
+// 	};	
+// }
 
-let user = new User("Daniil");
-console.log(user.name);
-user = new User('');
-console.log(user.name);
+// let user = new User("Daniil");
+// console.log(user.name);
+// user = new User('');
+// console.log(user.name);
 
 
 // ////////////////////////////////////////////////////
@@ -247,13 +247,13 @@ console.log(user.name);
 
 // В приведённом выше примере у класса User были только методы. Давайте добавим свойство:
 
-// class User {
-//   name = "Аноним";
+class User {
+  name = "Аноним";
 
-//   sayHi() {
-//     alert(`Привет, ${this.name}!`);
-//   }
-// }
+  sayHi() {
+    alert(`Привет, ${this.name}!`);
+  }
+}
 
-// new User().sayHi();
+new User().sayHi();
 // Свойство name не устанавливается в User.prototype. Вместо этого оно создаётся оператором new перед запуском конструктора, это именно свойство объекта.

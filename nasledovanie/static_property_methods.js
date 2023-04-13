@@ -128,11 +128,11 @@ rabbits[0].run(); // Чёрный кролик бежит со скорость�
 
 // Давайте это проверим кодом:
 
-class Animal {}
-class Rabbit extends Animal {}
+// class Animal {}
+// class Rabbit extends Animal {}
 
-// для статики
-alert(Rabbit.__proto__ === Animal); // true
+// // для статики
+// alert(Rabbit.__proto__ === Animal); // true
 
-// для обычных методов
-alert(Rabbit.prototype.__proto__ === Animal.prototype); // true
+// // для обычных методов
+// alert(Rabbit.prototype.__proto__ === Animal.prototype); // true

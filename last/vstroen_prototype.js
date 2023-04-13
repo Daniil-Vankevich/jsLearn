@@ -10,16 +10,16 @@
 // // Обратите внимание, что по цепочке прототипов выше Object.prototype больше нет свойства [[Prototype]]:
 // alert(Object.prototype.__proto__); // null
 
-// function User(name) {
-// 	this.name = name;
-// }
-// User.prototype = {sayHi() { console.log('hello') }}
+function User(name) {
+	this.name = name;
+}
+User.prototype = {sayHi() { console.log('hello') }}
 
-// let user = new User('John');
-// console.log(user.__proto__)
+let user = new User('John');
+console.log(user.__proto__)
 
 // console.log(Object.getOwnPropertyNames(Array.prototype))
-// console.log([1, 2, 3].sort())
+console.log([1, 2, 3].sort())
 
 
 
@@ -163,21 +163,21 @@
 
 // Если унаследованные свойства нам не нужны, то мы можем отфильтровать их при помощи встроенного метода obj.hasOwnProperty(key): он возвращает true, если у obj есть собственное, не унаследованное, свойство с именем key.
 
-let animal = {
-  eats: true
-};
+// let animal = {
+//   eats: true
+// };
 
-let rabbit = {
-  jumps: true,
-  __proto__: animal
-};
+// let rabbit = {
+//   jumps: true,
+//   __proto__: animal
+// };
 
-for(let prop in rabbit) {
-  let isOwn = rabbit.hasOwnProperty(prop);
+// for(let prop in rabbit) {
+//   let isOwn = rabbit.hasOwnProperty(prop);
 
-  if (isOwn) {
-    alert(`Our: ${prop}`); // Our: jumps
-  } else {
-    alert(`Inherited: ${prop}`); // Inherited: eats
-  }
-}
+//   if (isOwn) {
+//     alert(`Our: ${prop}`); // Our: jumps
+//   } else {
+//     alert(`Inherited: ${prop}`); // Inherited: eats
+//   }
+// }
