@@ -1,0 +1,17 @@
+.pre__table {
+	margin-left: 575px;
+	margin-top: 180px;
+}
+
+.table-color {
+	border: 3px solid black;
+	border-collapse: collapse;
+	width: 350px;
+	height: 350px;
+}
+
+td {
+	border: 1px solid rgb(63, 61, 61);
+	vertical-align:middle;
+	padding-left: 20px;
+}
