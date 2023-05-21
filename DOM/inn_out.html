@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inner_Outer</title>
+</head>
+<body>
+
+	<div id="divan">Привет, мир!</div>
+	
+	<p class="win">Daniil Medvedev win in the Rome 2023</p>
+
+<script>
+  let div = document.getElementById("divan");
+	let win = document.getElementsByClassName('win')[0];
+	// Мы можем добавить HTML к элементу, используя elem.innerHTML+="ещё html".
+  div.innerHTML += '<p>Новый элемент</p>'; // (*)
+
+	win.outerHTML = '<p>He is a champion in Rome, it is really!</p>'
+
+  alert(div.innerHTML); // <div>Привет, мир!</div> (**)
+
+	alert(win.outerHTML);
+
+	div.innerHTML += '<p>Новый элемент</p>'; // (*)
+
+	div.innerHTML += '<p>Новый элемент</p>'; // (*)
+
+
+
+	// document.body.innerHTML = 'Новый BODY!'; // заменяем содержимое
+
+	// document.body.innerHTML = '<b>тест'; // забыли закрыть тег
+  // alert( document.body.innerHTML ); // <b>тест</b> (исправлено)
+
+</script>
+
+
+
+
+
+
+	<!-- <script>
+		// alert(document.body.firstElementChild);
+		// document.body.innerHTML = '<b>text';
+		// alert(document.body.innerHTML);
+		// alert(document.body.outerHTML);
+
+		console.log('Hello, world!');
+
+		const paragraph = document.getElementsByClassName('para');
+		// console.log(document.body.innerHTML);
+		console.log(paragraph.length);
+		// console.log(document.body.outerHTML);
+
+		document.body.innerHTML = 'paragraph#69';
+		// console.log(document.body.innerHTML);
+		// console.log(document.body.outerHTML);
+		paragraph.outerHTML = 'paragraph#70';
+		console.log(document.body.firstChild);
+	</script> -->
+</body>
+</html>
