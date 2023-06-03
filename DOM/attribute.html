@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attribute and properties</title>
+
+	<style>
+
+		td[data-cell-yellow = "yellow"] {
+			background: yellow;
+		}
+
+		td[data-cell-yellow = "green"] {
+			background: green;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="elem" about="Elephant">Salamiii</div>
+
+	<!-- скрипт для отрабатывания проверки наличия атрибута, получения, добавления и удаления атрибута -->
+	<!-- <script>
+		let check = document.body;
+		check.myData = {
+			firstName: 'Lubov',
+			surname: 'Zubkova',
+			age: 18,
+		}
+
+		check.sayHi = function() {
+			return this.myData.firstName;
+		}
+
+		check.sayTagName = function() {
+			alert(this.tagName);
+		}
+
+		check.id = 'test';
+		console.log(check.id);
+
+		check.lastGirlfriend = 'Lubov Zubkova';
+		console.log(check.hasAttribute('id'));
+
+		check.setAttribute('Lubushka',18 );
+
+		console.log(check.hasAttribute('Lubushka'));
+
+		console.log(check.getAttribute('Lubushka'));
+
+		console.log(check.removeAttribute('Lubushka'));
+
+		console.log(check.hasAttribute('Lubushka'));
+		// console.log(check.outerHTML);
+
+		console.log(elem.outerHTML);
+
+		alert(check.myData.age);
+		alert(check.sayHi());
+		console.log(check.sayTagName());
+	</script> -->
+
+	<!-- <script>
+		let div = document.getElementById('elem');
+		for(let val of div.attributes) {
+			console.log(val);
+		}
+	</script> -->
+
+	
+	
+	<!--Применение нестандартных атрибутов-->
+	<table class="tbl">
+		<tr>
+			<td data-cell-yellow = "yellow">1</td>
+			<td data-cell-blue = "blue">2</td>
+			<td data-cell-yellow = "yellow">3</td>
+			<td data-cell-blue = "blue">4</td>
+		</tr>
+			<tr>
+				<td data-cell-blue = "blue">5</td>
+				<td data-cell-yellow = "yellow">6</td>
+				<td data-cell-blue = "blue">7</td>
+				<td data-cell-yellow = "yellow">8</td>
+			</tr>
+	</table>
+
+	<script>
+		let flskip = false;
+		for (let cell of document.querySelectorAll('[data-cell-yellow]')) {
+			if (!flskip) {
+				cell.dataset.cellYellow = 'green';
+			}
+			flskip = !flskip;
+		}
+	</script>
+
+
+
+	<!-- <script>
+		for(let cell of document.querySelectorAll('[cell-yellow]')) {
+			let attr = cell.getAttribute('cell-yellow');
+			cell.style.background = attr;
+		}
+
+	</script> -->
+
+</body>
+</html>

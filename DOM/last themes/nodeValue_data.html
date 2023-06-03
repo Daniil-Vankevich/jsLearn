@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>nodeValue/data</title>
+</head>
+<body>
+	SalamAleikum, bruuh
+	<!--AleikumAsalam!-->
+	<!-- <script>
+		let salam = document.body.firstChild;
+		alert(salam.data);
+
+		let comment = salam.nextSibling;
+		alert(comment.data);
+	</script> -->
+
+	<!--Свойство textContent предоставляет доступ к тексту внутри элемента за вычетом всех <тегов>-->
+
+	<!-- <div id="news">
+		<h1>Срочно в номер!</h1>
+		<p>Марсине выпили всю мока колу! человечества</p>
+	</div>
+
+	<script>
+		  // Срочно в номер! Марсиане атаковали человечество!
+			alert(news.textContent);
+	</script> -->
+	<!-- Намного полезнее возможность записывать текст в textContent, т.к. позволяет писать текст «безопасным способом».
+
+Представим, что у нас есть произвольная строка, введённая пользователем, и мы хотим показать её.
+
+С innerHTML вставка происходит «как HTML», со всеми HTML-тегами.
+С textContent вставка получается «как текст», все символы трактуются буквально-->
+	
+	<!-- <div id="elem2"></div>
+	<div id="elem1"></div>
+
+	<script>
+		let name = prompt("Введите ваше имя?", "<b>Винни-пух!</b>");
+
+		elem2.innerHTML = name;
+		elem1.textContent = name;
+	</script> -->
+	<!--В первый <div> имя приходит «как HTML»: все теги стали именно тегами, поэтому мы видим имя, выделенное жирным шрифтом.
+Во второй <div> имя приходит «как текст», поэтому мы видим <b>Винни-пух!</b>.
+В большинстве случаев мы рассчитываем получить от пользователя текст и хотим, чтобы он интерпретировался как текст. Мы не хотим, чтобы на сайте появлялся произвольный HTML-код. Присваивание через textContent – один из способов от этого защититься-->
+
+	<!--Property of 'hiddden - скрывать'-->
+
+	<div id="super__class">
+		Оба тега внизу невидимы
+	</div>
+
+	<div hidden id="ass">
+		С атрибутом "hidden" также не виден
+	</div>
+
+	<div id="elem">С назначенным JavaScript свойством "hidden"</div>
+	<script>
+		elem.hidden = false;
+		super__class.hidden = true;
+		ass.hidden = false;
+		// если сначала назначить в html hidden, а потом переназначить с помощью js, то работать будет свойство заданное последним, т.е в JavaScript. Если же нам нужно быстро что-либо узнать или нас интересует специфика определённого браузера – мы всегда можем вывести элемент в консоль, используя console.dir(elem), и прочитать все свойства. Или исследовать «свойства DOM» во вкладке Elements браузерных инструментов разработчика.
+	</script>
+
+<!--У DOM-элементов есть дополнительные свойства, в частности, зависящие от класса:
+
+value – значение для <input>, <select> и <textarea> (HTMLInputElement, HTMLSelectElement…).
+href – адрес ссылки «href» для <a href="..."> (HTMLAnchorElement).
+id – значение атрибута «id» для всех элементов (HTMLElement).
+…и многие другие…
+Например:
+
+<input type="text" id="elem" value="значение">
+
+<script>
+  alert(elem.type); // "text"
+  alert(elem.id); // "elem"
+  alert(elem.value); // значение
+</script>-->
+
+</body>
+</html>
