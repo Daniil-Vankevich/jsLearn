@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document-DZ DZ__attribute</title>
+</head>
+<body>
+	<div data-widget-name = "menu" class="widget">
+		Choose the genre
+	</div>
+
+	<a name="list">the list</a>
+<ul>
+  <li><a href="http://google.com">http://google.com</a></li>
+  <li><a href="/tutorial">/tutorial.html</a></li>
+  <li><a href="local/path">local/path</a></li>
+  <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+  <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+  <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+</ul>
+
+	<script>
+		// let genre = document.querySelector('div');
+		// console.log(genre.getAttribute('data-widget-name'));
+
+		// let element = document.querySelector('[data-widget-name]');
+		// console.log(element.dataset.widgetName);
+
+		let link = document.querySelectorAll('a');
+
+		for (let linkin of link) {
+			
+			let href = linkin.getAttribute('href');
+
+			if (!href) continue;
+
+			if (!href.includes('://')) continue;
+
+			if (href.includes('http://internal.com')) continue; // внутренняя ссылка
+			linkin.style.color = 'orange';
+		}
+
+	</script>
+
+</body>
+</html>

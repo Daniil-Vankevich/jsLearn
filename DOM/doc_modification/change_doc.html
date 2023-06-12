@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document-modification</title>
+</head>
+<body>
+	<style>
+		.products {
+			width: 500px;
+			height: 300px;
+			border-radius: 10px;
+			border: 2px solid #000;
+			font-size: 30px;
+			text-align: center;
+			color: blueviolet;
+			padding-top: 50px;
+			font-weight: 800;
+			margin: 0 auto;
+			margin-bottom: 25px;
+			background-color:aqua;
+		}
+
+		.contacts {
+			font-size: 24px;
+			font-weight: bold;
+			background-color:burlywood;
+			color: black;
+			border: 3px dotted #000;
+			line-height: 30px;
+			text-align: center;
+			margin: 0 auto;
+			border-radius: 30px;
+			width: 250px;
+			height: 100px;
+			padding-top: 35px;
+			margin-bottom: 25px;
+		}
+
+	</style>
+
+	<script>
+		// setTimeout(() => {
+		// 	document.write('<div> Строка вставленнаям методом write')
+		// }, 10000)
+	</script>
+
+	<script>
+		let section = document.createElement('section');
+		section.className = 'products';
+		section.innerHTML = 'Наши лучшие продукты';
+		document.body.append(section);
+
+		let div = document.createElement('div');
+		div.className = 'contacts';
+		div.innerHTML = 'Для поддержания связи с нами';
+		document.body.append(div);
+
+		let text = document.createTextNode('<p> Super node children');
+		document.body.append(text);
+
+		let clone = text.cloneNode(true);
+		document.body.append(clone);
+
+
+		let clone1 = section.cloneNode(true);
+		document.body.after(clone1);
+
+		text.remove(text);
+
+		// clone.remove();
+
+		clone1.replaceWith(text)
+
+		document.write('<div> Строка вставленнаям методом write')
+
+	</script>
+
+	<h1>Планеты солнечной системы</h1>
+	<nav>
+		<ul>
+			<li>Венера</li>
+			<li>Земля</li>
+			<li>Марс</li>
+		</ul>
+	</nav>
+
+	<script>
+		const planet = document.querySelector('ul');
+		planet.insertAdjacentHTML('beforebegin', '<hr>')
+		planet.insertAdjacentHTML('afterbegin', '<li>Меркурий');
+		planet.insertAdjacentHTML('beforeend', '<li>Юпитер');
+		planet.insertAdjacentHTML('afterend', '<hr>')	
+	</script>
+
+	<h2>Super Car</h2>
+	<ul id="listik">
+
+	</ul>
+
+	<script>
+		let fr = new DocumentFragment();
+		let list = ['Porsche911', 'LamorginiAvenrador', 'FerrariF808'];
+		let ul = document.getElementById('listik');
+		for (let p of list) {
+			let item = document.createElement('li');
+			item.innerHTML = p;
+			fr.append(item);
+		}
+		ul.append(fr);
+
+		let text1 = document.createTextNode('<p> Super node children');
+		document.body.prepend(text1);
+	</script>
+</body>
+</html>
