@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Style and Class</title>
+</head>
+<body>
+
+
+	<script>
+
+		document.body.style.backgroundColor = 'blue';
+
+		document.body.className = 'main main__page';
+
+		document.body.classList.add('active');
+
+		document.body.classList.remove('main');
+
+		document.documentElement.style.height = '100%';
+		document.body.style.height = '100%';
+
+
+		const div = document.createElement('div');
+		div.className = 'main main__page';
+		div.innerHTML = 'The best product in our magazine';
+		document.body.prepend(div);
+		
+		div.setAttribute('style', 'font-size: 40px');
+		div.style.color = 'white';
+		div.style.cssText = 
+		`background-color: pink;
+		font-size: 48px;
+		border: 2px solid #000;
+		border-radius: 30px;
+		line-height: 35px;
+		text-align: center;
+		padding: 25px 0px 25px 0px;
+		height: 50px;
+		position: relative;
+		`
+
+
+
+
+		const footerDiv = document.createElement('div');
+		footerDiv.className = 'footer footer__page footer__page_active';
+		footerDiv.innerHTML = 'Will be contact with us';
+		document.body.append(footerDiv);
+		footerDiv.style.cssText = 
+		`background-color: pink;
+		font-size: 40px;
+		border: 2px solid #000;
+		border-radius: 20px;
+		line-height: 20px;
+		text-align: center;
+		padding: 15px 0px 0px 0px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+
+		`
+
+
+
+
+
+
+
+
+
+		// for (let foot of footerDiv.classList) {
+		// 	alert (foot);
+		// }
+
+
+		// div.style.display = 'none';
+
+		// setTimeout(() => {
+		// 	div.style.display = '';
+		// }, 3000)
+
+
+	</script>
+</body>
+</html>
