@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+    #field {
+      width: 200px;
+      border: 10px groove black;
+      background-color: #00FF00;
+      position: relative;
+			height: 300px;
+    }
+
+    #ball {
+      position: absolute;
+			width: 120px;
+  		height: 120px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- <div id="field">
+	<img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+	. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+</div> -->
+<!-- <script>
+	let bal = document.getElementById('field');
+	console.log(bal.clientWidth);
+	console.log(bal.clientHeight);
+  
+	console.log('araraa');
+
+	let bal1 = bal.clientHeight / 2;
+	let bal2 = bal.clientWidth / 2;
+
+	console.log(bal1);
+	console.log(bal2);
+	console.log('araraa');
+
+	let ball = document.getElementById('ball');
+	console.log(ball.clientWidth);
+	console.log(ball.clientHeight);
+
+	console.log('araraa');
+
+	ball.style.left = Math.round(bal.clientWidth / 2 - ball.offsetWidth / 2) + 'px';
+	ball.style.top = Math.round(bal.clientHeight / 2 - ball.offsetHeight / 2) + 'px';
+	
+	console.log(ball.style.left);
+	console.log(ball.style.top);
+
+</script> -->
+
+<style>
+.lorem {
+	border: 10px solid #000;
+	width: 200px;
+	height: 200px;
+	overflow-y: scroll;
+}
+</style>
+
+<div class="lorem">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quaerat corporis a provident et earum explicabo cum esse. At vitae, impedit ipsum aliquid repudiandae odit consequatur sit praesentium dolorem autem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod amet deserunt ipsa? Placeat neque, vitae rerum odit corporis officia natus dignissimos tenetur quas sunt, commodi harum, nobis alias non fugit.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat consectetur magnam veritatis blanditiis, numquam saepe omnis consequatur placeat maiores tenetur similique quod? Natus, cum ipsam fuga vitae cupiditate neque optio?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci maxime tempore iusto quisquam quo animi vel ipsum ratione praesentium! Ipsam error, maiores qui aperiam quidem aspernatur veniam et natus commodi dignissimos rem illo! Incidunt, ipsam obcaecati nisi asperiores dolore consequuntur tempora, ad, illo quae culpa tenetur neque cupiditate sapiente aperiam ex dolor nesciunt quod saepe adipisci natus iste expedita ut quia! Perspiciatis, maiores culpa ullam delectus quae rem illum? Ullam?
+</div>
+
+<script>
+	let scrol = document.querySelector('div');
+	console.log(scrol.clientWidth);
+	console.log(scrol.clientHeight);
+	console.log(scrol.offsetWidth);
+	console.log(scrol.offsetHeight);
+
+	let scrollResult = scrol.offsetWidth - scrol.clientWidth;
+	console.log(scrollResult);
+
+	let div2 = document.createElement('div');
+	div2.style.overflowY = 'scroll';
+	div2.style.width = '150px';
+	div2.style.height = '150px';
+	div2.innerHTML = 'loremhybbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb';
+	document.body.append(div2);
+
+	let scrollWidth = div2.offsetWidth - div2.clientWidth;
+	alert(scrollWidth);
+	console.log(div2.offsetWidth);
+	console.log(div2.clientWidth);
+
+</script>
+</body>
+</html>
