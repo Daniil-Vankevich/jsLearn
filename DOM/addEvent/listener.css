@@ -83,7 +83,7 @@ body {
 	height: 800px;
 	border: 2px solid #000;
 	background-color:rgb(134, 99, 118);
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 }
 
 .block {
@@ -92,6 +92,7 @@ body {
 	color: rgb(253, 253, 253);
 	border: 2px solid #000;
 	background-color:rgb(22, 24, 24);
+	margin-bottom: 50px
 
 }
 .block__inner {
@@ -110,4 +111,5 @@ body {
 	border: 2px solid #000;
 	background-color:rgb(45, 54, 54);
 	margin-top: 30px;
+	margin-bottom: 50px;
 }

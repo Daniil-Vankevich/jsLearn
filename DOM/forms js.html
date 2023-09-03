@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript и формы</title>
+	<link rel="stylesheet" href="./forms js.css">
+</head>
+<body>
+	<h1 class="title-js"> 
+		<span>JavaScript</span> и формы
+	</h1>
+	<p class="description">Lesson number 16</p>
+	<div class="wrapper">
+		<form action="" class="form-js" name="main">
+			<div class="form-js_div1">
+				<label class="field__text">Поле ввода</label>
+				<input type="text" class="form-js__field" placeholder="Введи что-то" name="inputtext" value="Hello!">
+			</div>
+			<div class="form-js_div1">
+				<label class="field__text">Большое поле для ввода</label>
+				<textarea class="forms__area"  placeholder="Введите текстик" name="textarea__vvod" id="" cols="22" rows="6">Я веб-разработчик</textarea>
+			</div>
+			<div class="btn-div">
+				<button class="form-btn" type="submit">Кнопка отправки формы</button>
+			</div>
+		</form>
+		<form action="" class="form-js-radioBtn" name="main2">
+			<div class="form-js__div2">
+				<label class="field__text" name = "label__smart" >Радиокнопки</label>
+				<input id="radio1" type="radio" class="form-js__fiel" checked name="radiobtn"> Кнопка 1
+				<div class="divradiovloj">
+						<input type="radio" class="form-js__fiel" name="radiobtn"> Кнопка 2
+				</div>
+			</div>
+			<div class="check__div">
+				<input type="checkbox" class="form-js__checkbox"  name="checkbtn" checked> Чекбокс
+			</div>
+			<div class="file__div">
+				<label class="field__text">Прикрепить файл</label>
+				<input type="file" class="form-js__file" name="filebtn">
+			</div>
+			<div class="divoption">
+				<label class="list-menu"><input class="input-menu" placeholder="выберите" list="cocktail">Выберите из меню</label>
+				<datalist id="cocktail">
+				<option>Аперитивы</option>
+					<option>Горячие</option>
+					<option>Десертные</option>
+					<option>Диджестивы</option>
+					<option selected>Молочные</option>
+					<option>Слоистые</option>
+				</datalist> 
+				<div class="select">
+					<select multiple id="cocktaill" style="margin-top: 15px;" name="selectBlock">
+						<option value="69">Аперитивы</option>
+							<option>Горячие</option>
+							<option>Десертные</option>
+							<option>Диджестивы</option>
+							<option selected>Молочные</option>
+							<option>Слоистые</option>
+						</select> 
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+
+	<script src="./forms.js"></script>
+</body>
+</html>
