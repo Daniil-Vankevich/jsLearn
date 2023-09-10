@@ -61,11 +61,20 @@ body {
 	display: flex;
 }
 
+.wrapper__focus {
+	border: 2px dashed #292222;
+}
+
 .form-js {
 	border: 2px solid #0000;
 	margin-top: 40px;
 	padding-bottom: 50px;
 }
+
+.form-js__active {
+	border: 2px dashed #292222;
+}
+
 .field__text {
 	font-size: 16px;
 	color: rgb(238, 236, 236);
@@ -79,6 +88,10 @@ body {
 	color: rgb(12, 12, 12);
 	margin-top: 20px;
 	margin-bottom: 40px;
+}
+
+.form-js__field:focus {
+	box-shadow: 4px -3px 3.5px 1px #292222, 6px 6px 2px 1px rgba(0, 0, 255, .2);;
 }
 
 .forms__area {

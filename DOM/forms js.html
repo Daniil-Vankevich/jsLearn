@@ -11,15 +11,15 @@
 		<span>JavaScript</span> и формы
 	</h1>
 	<p class="description">Lesson number 16</p>
-	<div class="wrapper">
+	<div tabindex="-1" class="wrapper">
 		<form action="" class="form-js" name="main">
 			<div class="form-js_div1">
 				<label class="field__text">Поле ввода</label>
-				<input type="text" class="form-js__field" placeholder="Введи что-то" name="inputtext" value="Hello!">
+				<input tabindex="1" type="text" class="form-js__field" placeholder="Введи что-то" name="inputtext" value="">
 			</div>
 			<div class="form-js_div1">
 				<label class="field__text">Большое поле для ввода</label>
-				<textarea class="forms__area"  placeholder="Введите текстик" name="textarea__vvod" id="" cols="22" rows="6">Я веб-разработчик</textarea>
+				<textarea tabindex="2" class="forms__area"  placeholder="Введите текстик" name="textarea__vvod" id="" cols="22" rows="6"></textarea>
 			</div>
 			<div class="btn-div">
 				<button class="form-btn" type="submit">Кнопка отправки формы</button>
@@ -27,10 +27,10 @@
 		</form>
 		<form action="" class="form-js-radioBtn" name="main2">
 			<div class="form-js__div2">
-				<label class="field__text" name = "label__smart" >Радиокнопки</label>
-				<input id="radio1" type="radio" class="form-js__fiel" checked name="radiobtn"> Кнопка 1
+				<label id="myText" class="field__text" name = "label__smart" >Радиокнопки</label>
+				<input id="radio1" type="radio" class="form-js__fiel" name="radiobtnnew"> Кнопка 1
 				<div class="divradiovloj">
-						<input type="radio" class="form-js__fiel" name="radiobtn"> Кнопка 2
+						<input checked type="radio" class="form-js__fiel" name="radiobtnnew"> Кнопка 2
 				</div>
 			</div>
 			<div class="check__div">
